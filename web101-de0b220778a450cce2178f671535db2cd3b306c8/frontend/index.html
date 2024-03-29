@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ส่วนที่ไม่แสดงออกไปในหน้าจอของ Browser -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document 2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ส่วนที่แสดงออกไปในหน้าจอของ Browser -->
+  <a href="user.html">Go to Edit Customer Data</a>
+
+  <div class="container">
+    <!-- 3. form -->
+    <div class="header form-input">
+      Real Estate Management System
+    </div>
+    <div class="flex form-input">
+      <div class="header-form">รายละเอียดผู้เช่า/ซื้อ</div>
+      <input class="form" name="Renterpurchasedetails" type="text">
+    </div>
+    <div class="flex form-input">
+      <div class="header-form">เงื่อนไขการเช่า/ซื้อ</div>
+      <input class="form" name="Rentalpurchaseconditions" type="text">
+    </div>
+    <div class="flex form-input">
+      <div class="header-form">ที่ตั้ง</div>
+      <input class="form" name="Location" type="text">
+    </div>
+    <div class="flex form-input">
+      <div class="header-form">ขนาด</div>
+      <input class="form" name="scale" type="number" min="0" max="1000">
+    </div>
+    <div class="flex Usagestatus form-input">
+      <div class="header-form">สถานะการใช้งาน</div>
+      <div class="flex">
+        <div>
+          <input name="Usagestatus" type="radio" value="เช่า"> เช่า
+        </div>
+        <div>
+          <input name="Usagestatus" type="radio" value="ขาย"> ขาย
+        </div>
+        <div>
+          <input name="Usagestatus" type="radio" value="ไม่มีการเช่า/ซื้อขาย"> ไม่มีการเช่า/ซื้อขาย
+        </div>
+      </div>
+    </div>
+    <div class="flex form-input">
+      <div class="header-form">การบำรุงรักษา</div>
+      <input class="form" name="Maintenance" type="text">
+    </div>
+    <div class="flex form-input">
+      <div class="header-form">ค่าใช้จ่ายประจำเดือน</div>
+      <input class="form" name="Monthlyexpenses" type="number" min="0" max="1000000">
+    </div>
+    <div id="message" class="message"></div>
+    
+    <div class="center">
+      <button onclick="submitData()" class="button">บันทึกข้อมูล</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
